@@ -1,0 +1,33 @@
+.skills {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  min-width: 300px;
+  height: 100%;
+}
+.skills__img {
+  display: block;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 400px;
+  width: 300px;
+  background-image: url(./../imeges/Viktor.png),
+    linear-gradient(221.87deg, rgb(235, 235, 235) 45%, #9b9b9b 58%);
+}
+.skils__tegs {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  background: $bakground-heder;
+  padding: 15px 20px;
+  color: $main-text;
+}
+.skills__title {
+  padding-top: 10px;
+  margin-bottom: 15px;
+  color: $accent-color;
+}
+.skills__teg {
+  list-style: none;
+}

@@ -1,0 +1,20 @@
+.footer {
+  display: flex;
+  min-height: 50px;
+  width: 100%;
+  font-size: 14px;
+  background: $bakground-heder;
+  padding: 10px;
+}
+.plase {
+  margin-top: auto;
+  margin-bottom: auto;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+  }
+}
