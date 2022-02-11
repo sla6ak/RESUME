@@ -13,9 +13,6 @@ export class Thema extends Language {
     this.setLocalThema();
     this.refs.body.classList.toggle('body--dark');
     this.refs.themaImg.classList.toggle('skills__img--dark');
-    this.refs.linkProject.forEach(el => {
-      el.classList.toggle('text--dark');
-    });
     //   this.refs.body.classList.toggle( 'body--dark' );
     //   this.refs.body.classList.toggle( 'body--dark' );
     //   this.refs.body.classList.toggle('body--dark');

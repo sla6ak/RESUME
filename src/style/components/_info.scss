@@ -44,7 +44,8 @@ h2 {
 .info__prodject--link {
   position: relative;
   display: block;
-  color: $main-text;
+  color: rgb(138, 138, 138);
+  text-shadow: 1px 1px 1px black;
   margin-right: auto;
   @media screen and (min-width: 1200px) {
     margin-right: 50px;
@@ -60,11 +61,10 @@ h2 {
     left: 0px;
     width: 100%;
     background-color: $accent-color;
+    height: 0px;
     height: 1px;
+    box-shadow: 0 0 3px 0 #a36e0a inset, 0 0 3px 1px #9e6f0a67;
   }
-}
-.text--dark {
-  color: rgb(138, 138, 138);
 }
 .info__project-li {
   display: flex;
