@@ -21,6 +21,7 @@
   margin-bottom: auto;
 }
 .logo {
+  position: relative;
   color: $accent-color;
   font-weight: 600;
   font-size: 20px;
@@ -29,6 +30,21 @@
   }
   @media screen and (min-width: 1200px) {
     font-size: 24px;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    background-color: $main-text;
+    height: 2px;
+    transform: scaleX(0);
+    transition: transform 0.25s;
+  }
+  &:hover:after {
+    transform: scaleX(1);
+    transition: transform 0.25s;
   }
 }
 .calling {
@@ -161,6 +177,7 @@ input:checked + .slider:before {
   position: relative;
   padding-top: 7px;
   padding-bottom: 7px;
+  color: $main-text;
   &:hover,
   &:focus {
     color: $accent-color;
