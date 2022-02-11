@@ -188,21 +188,21 @@ input:checked + .slider:before {
     position: absolute;
     background-color: $accent-color;
     left: 39%;
-    width: 5px;
-    height: 32px;
-    top: 18px;
-    margin-left: -17px;
+    width: 3px;
+    height: 23px;
+    top: 24px;
+    margin-left: -15px;
     transform: rotate(-78deg);
     border-radius: 10px;
     transition: background-color 200ms linear;
     content: '';
   }
   &:after {
-    width: 31px;
-    height: 5px;
-    transform: rotate(-13deg);
-    margin-left: -2px;
-    top: 31px;
+    width: 24px;
+    height: 3px;
+    transform: rotate(-11deg);
+    margin-left: -4px;
+    top: 34px;
   }
 }
 .earth {
