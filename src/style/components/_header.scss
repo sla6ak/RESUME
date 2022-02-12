@@ -179,10 +179,6 @@ input:checked + .slider:before {
   padding-top: 7px;
   padding-bottom: 7px;
   color: $main-text;
-  &:hover,
-  &:focus {
-    color: $accent-color;
-  }
   &:after,
   &:before {
     position: absolute;
@@ -204,8 +200,12 @@ input:checked + .slider:before {
     margin-left: -4px;
     top: 34px;
   }
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
 }
-.earth {
+.language .earth {
   margin-left: 5px;
   height: 20px;
   width: 20px;
@@ -215,18 +215,52 @@ input:checked + .slider:before {
   background-image: url(./../imeges/svg/sphere.svg);
 }
 .language__modal {
+  justify-content: center;
+  border-radius: 3px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  transform: scaleY(0);
   opacity: 0;
+  color: $main-text;
+  text-shadow: none;
   position: absolute;
   top: 1px;
   right: 1px;
   height: 1px;
   width: 1px;
 }
-.language__modal--click {
-  opacity: 1;
-  position: absolute;
-  top: 1px;
-  right: 1px;
-  height: 60px;
-  width: 50px;
+.language__modal .language__el {
+  font-size: 16px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid $dark-text;
+  width: 100%;
+  text-align: center;
+  &:hover {
+    color: $accent-color;
+    text-shadow: 1px 1px 1px black;
+  }
 }
+.language:hover .language__modal {
+  transform: scaleY(1);
+  background-color: $bakground-modal;
+  position: absolute;
+  opacity: 1;
+  top: 37px;
+  left: -20px;
+  height: auto;
+  width: 90px;
+}
+// .language__modal--click {
+//   transform: scaleY(1);
+//   background-color: $bakground-modal;
+//   position: absolute;
+//   opacity: 1;
+//   top: 40px;
+//   left: -20px;
+//   height: auto;
+//   width: 90px;
+//   padding: 20px 10px 20px 10px;
+// }
