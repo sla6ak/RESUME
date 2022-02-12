@@ -23,12 +23,14 @@ export class Listener extends Thema {
     const back = this.refs.backdropMap;
     this.refs.body.classList.add('body__no-scroll');
     back.classList.remove('displey-hidden');
+    this.refs.upScroll.classList.add('up-hidden');
     const onBackClick = evn => {
       if (evn.target !== back) {
         return;
       }
       back.classList.add('displey-hidden');
       this.refs.body.classList.remove('body__no-scroll');
+      this.refs.upScroll.classList.remove('up-hidden');
       back.removeEventListener('click', onBackClick);
     };
     back.addEventListener('click', onBackClick);
@@ -47,8 +49,8 @@ export class Listener extends Thema {
       'scroll',
       debounce(() => {
         scrollY > 200
-          ? this.refs.upScroll.classList.remove('displey-hidden')
-          : this.refs.upScroll.classList.add('displey-hidden');
+          ? this.refs.upScroll.classList.remove('up-hidden')
+          : this.refs.upScroll.classList.add('up-hidden');
       }, 250),
     );
   };

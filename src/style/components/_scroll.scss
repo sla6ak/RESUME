@@ -45,3 +45,10 @@
     }
   }
 }
+.up-hidden {
+  display: none;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
