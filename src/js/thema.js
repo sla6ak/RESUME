@@ -19,11 +19,11 @@ export class Thema extends Language {
   };
 
   setLocalThema = () => {
-    localStorage.setItem('thema', JSON.stringify(this.refs.themaBt.hasAttribute('checked')));
+    localStorage.setItem('themaResume', JSON.stringify(this.refs.themaBt.hasAttribute('checked')));
   };
 
   getLocalThema = () => {
-    const selectThema = localStorage.getItem('thema');
+    const selectThema = localStorage.getItem('themaResume');
     if (selectThema) {
       if (selectThema === 'true') {
         this.onThemaClick();

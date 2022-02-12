@@ -234,15 +234,17 @@ input:checked + .slider:before {
   list-style: none;
   transform: scaleY(0);
   transform-origin: top;
-  transition: transform 0.3s;
+  transition-property: transform opacity;
+  transition-duration: 0.3s;
   opacity: 0;
   color: $main-text;
   text-shadow: none;
+  top: 37px;
+  left: -20px;
   position: absolute;
-  top: 1px;
-  right: 1px;
-  height: 1px;
-  width: 1px;
+  height: auto;
+  width: 90px;
+  background-color: $bakground-modal;
 }
 .language__modal .language__el {
   font-size: 16px;
@@ -262,11 +264,5 @@ input:checked + .slider:before {
 }
 .language:hover .language__modal {
   transform: scaleY(1);
-  background-color: $bakground-modal;
-  position: absolute;
   opacity: 1;
-  top: 37px;
-  left: -20px;
-  height: auto;
-  width: 90px;
 }

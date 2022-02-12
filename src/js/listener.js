@@ -6,12 +6,14 @@ export class Listener extends Thema {
   }
   start = () => {
     this.getLocalThema();
+    this.getLocalLanguage();
     this.listenerAll();
   };
   listenerAll = () => {
     this.refs.themaBt.addEventListener('click', this.onThemaClick);
     this.refs.languageTxt.addEventListener('click', this.onLanguageClick);
     this.refs.mapCity.addEventListener('click', this.onModalMapClick);
+    this.refs.languageModal.addEventListener('click', this.onLanguageClick);
   };
   // =====================footer map==========================
   onModalMapClick = () => {
