@@ -14,6 +14,7 @@ export class Listener extends Thema {
     this.refs.languageTxt.addEventListener('click', this.onLanguageClick);
     this.refs.mapCity.addEventListener('click', this.onModalMapClick);
     this.refs.languageModal.addEventListener('click', this.onLanguageClick);
+    this.curentDate();
   };
   // =====================footer map==========================
   onModalMapClick = () => {

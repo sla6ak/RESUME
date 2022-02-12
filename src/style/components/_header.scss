@@ -94,24 +94,26 @@
 .kastom {
   margin-top: 20px;
   display: flex;
-  justify-content: center;
   position: relative;
-}
-.thema {
-  margin-right: 120px;
-  @media screen and (min-width: 768px) {
-    margin-right: 250px;
-  }
-  @media screen and (min-width: 1200px) {
-    margin-right: 550px;
-  }
 }
 // ==================thema===================================
 .thema {
   position: relative;
   top: 9px;
-  left: 20px;
   display: flex;
+  margin-left: 20px;
+  width: 280px;
+  margin-right: auto;
+  @media screen and (min-width: 768px) {
+    margin-left: 60px;
+    width: 628px;
+    margin-right: auto;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-left: 150px;
+    width: 1024px;
+    margin-right: auto;
+  }
 }
 .time {
   margin-right: 10px;
@@ -174,12 +176,19 @@ input:checked + .slider:before {
 }
 // ===========language===================
 .language {
+  margin-right: 20px;
   cursor: pointer;
   display: flex;
   position: relative;
   padding-top: 7px;
   padding-bottom: 7px;
   color: $main-text;
+  @media screen and (min-width: 768px) {
+    margin-right: 50px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-right: 80px;
+  }
   &:after,
   &:before {
     position: absolute;
@@ -240,16 +249,18 @@ input:checked + .slider:before {
   color: $main-text;
   text-shadow: none;
   top: 37px;
-  left: -20px;
+  right: 0px;
   position: absolute;
   height: auto;
-  width: 90px;
-  background-color: $bakground-modal;
+  min-width: 90px;
 }
 .language__modal .language__el {
   font-size: 16px;
   padding-top: 15px;
   padding-bottom: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: $bakground-modal;
 
   width: 100%;
   text-align: center;

@@ -22,16 +22,29 @@ export class Resume {
       lastWork: document.querySelector('.js-last-work'),
       selfEducation: document.querySelector('.js-self-education'),
       hobby: document.querySelector('.js-hobby'),
-      //   themaBt: document.querySelector('.js-thema'),
-      //   themaBt: document.querySelector('.js-thema'),
-      //   themaBt: document.querySelector('.js-thema'),
-      //   themaBt: document.querySelector('.js-thema'),
-      //   themaBt: document.querySelector('.js-thema'),
-      //   themaBt: document.querySelector('.js-thema'),
-      //   themaBt: document.querySelector('.js-thema'),
-      //   themaBt: document.querySelector('.js-thema'),
-      //   themaBt: document.querySelector('.js-thema'),
-      //   themaBt: document.querySelector('.js-thema'),
+      hard: document.querySelector('.js-hard'),
+      soft: document.querySelector('.js-soft'),
+      logica: document.querySelector('.js-logica'),
+      honest: document.querySelector('.js-honest'),
+      stubborn: document.querySelector('.js-stubborn'),
+      designer: document.querySelector('.js-designer'),
+      course: document.querySelector('.js-course'),
+      courseStack: document.querySelector('.js-course-stack'),
+      languageMenu: document.querySelector('.language__menu'),
+      actuality: document.querySelector('.actuality'),
+      city: document.querySelector('.js-city'),
+      cityName: document.querySelector('.adress-city'),
+      dataNew: document.querySelector('.data__new'),
     };
   }
+  curentDate = () => {
+    let date = new Date();
+    const options = {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+    };
+    let monthDate = date.toLocaleString(this.curentLanguage, options);
+    this.refs.dataNew.textContent = `${monthDate}`;
+  };
 }

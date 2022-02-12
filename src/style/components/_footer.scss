@@ -114,3 +114,14 @@
   opacity: 0;
   transition: opacity 300ms linear;
 }
+.data__new {
+  @media screen and (min-width: 768px) {
+    margin-right: 20px;
+  }
+}
+.data {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}

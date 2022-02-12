@@ -48,7 +48,7 @@
         </menu>
       </div>
       <!-- *******thema******** -->
-      <div class="kastom">
+      <div class="kastom container">
         <div class="thema">
           <div class="time"></div>
           <label class="switch">
@@ -58,7 +58,7 @@
         </div>
         <!-- *******lanuage******** -->
         <div id="lang" class="language">
-          Language
+          <span class="language__menu">Language</span>
           <div class="earth"></div>
           <ul class="language__modal">
             <li class="language__el js-en">English</li>
@@ -73,7 +73,7 @@
       <section class="skills">
         <div class="skills__img"></div>
         <div class="skils__tegs">
-          <p class="skills__title">Hard skills</p>
+          <p class="skills__title js-hard">Hard skills</p>
           <ul class="skills__hard">
             <li class="skills__teg">Html</li>
             <li class="skills__teg">Css/Scss</li>
@@ -81,15 +81,15 @@
             <li class="skills__teg">Webpack/Parsel</li>
             <li class="skills__teg">React</li>
             <li class="skills__teg">Node.JS</li>
-            <li class="skills__teg">Linux terminal</li>
             <li class="skills__teg">Git</li>
+            <li class="skills__teg">Linux terminal</li>
           </ul>
-          <p class="skills__title">Soft skills</p>
+          <p class="skills__title js-soft">Soft skills</p>
           <ul class="skills__soft">
-            <li class="skills__teg">Good logic</li>
-            <li class="skills__teg">Photoshop</li>
-            <li class="skills__teg">Honest</li>
-            <li class="skills__teg">Stubborn</li>
+            <li class="skills__teg js-logica">Good logic</li>
+            <li class="skills__teg js-honest">Honest</li>
+            <li class="skills__teg js-stubborn">Stubborn</li>
+            <li class="skills__teg js-designer">Web-designer</li>
           </ul>
         </div>
       </section>
@@ -149,8 +149,9 @@
           <li class="info__punct">
             <h2 class="info__educations">Educations:</h2>
             <p class="info__text">
-              Full course in company <span class="accent"><b>GoIT</b></span> at one year: full-stack
-              developer.
+              <span class="js-course">Full course in company</span>
+              <span class="accent">GoIT</span
+              ><span class="js-course-stack course-stack"> at one year: full-stack developer.</span>
             </p>
             <p class="info__text js-self-education">Self-education IT and english.</p>
           </li>
@@ -177,9 +178,11 @@
     <footer class="footer">
       <div class="container">
         <div class="plase">
-          <p class="data">Resume up to date:<span class="data__new">2022</span></p>
+          <p class="data">
+            <span class="actuality">Resume up to date:</span><span class="data__new">2022</span>
+          </p>
           <p class="adress">
-            city:
+            <span class="js-city">city:</span>
             <span class="adress-city">Krivoy Rog</span>
             <span class="adress-img"></span>
           </p>
