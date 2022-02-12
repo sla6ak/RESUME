@@ -1,4 +1,5 @@
 import { Thema } from './thema';
+import { debounce } from 'debounce';
 
 export class Listener extends Thema {
   constructor() {
@@ -14,6 +15,7 @@ export class Listener extends Thema {
     this.refs.languageTxt.addEventListener('click', this.onLanguageClick);
     this.refs.mapCity.addEventListener('click', this.onModalMapClick);
     this.refs.languageModal.addEventListener('click', this.onLanguageClick);
+    this.scrollWindow();
     this.curentDate();
   };
   // =====================footer map==========================
@@ -30,5 +32,24 @@ export class Listener extends Thema {
       back.removeEventListener('click', onBackClick);
     };
     back.addEventListener('click', onBackClick);
+  };
+
+  // ==================scroll=====================
+
+  scrollWindow = () => {
+    this.refs.upScroll.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+      });
+    });
+    window.addEventListener(
+      'scroll',
+      debounce(() => {
+        scrollY > 200
+          ? this.refs.upScroll.classList.remove('displey-hidden')
+          : this.refs.upScroll.classList.add('displey-hidden');
+      }, 250),
+    );
   };
 }

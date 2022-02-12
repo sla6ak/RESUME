@@ -11,7 +11,8 @@ export class Resume {
       enBt: document.querySelector('.js-en'),
       uaBt: document.querySelector('.js-ua'),
       ruBt: document.querySelector('.js-ru'),
-      languageModal: document.querySelector('#lang'),
+      languageModal: document.querySelector('.language__modal'),
+      languageBox: document.querySelector('#lang'),
       name: document.querySelector('.js-name'),
       projeckts: document.querySelector('.info__proj'),
       educations: document.querySelector('.info__educations'),
@@ -35,6 +36,7 @@ export class Resume {
       city: document.querySelector('.js-city'),
       cityName: document.querySelector('.adress-city'),
       dataNew: document.querySelector('.data__new'),
+      upScroll: document.querySelector('#scrollup'),
     };
   }
   curentDate = () => {
