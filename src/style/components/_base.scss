@@ -19,6 +19,9 @@ a {
   min-height: 100vh;
   text-shadow: 1px 1px 1px rgb(165, 165, 165);
 }
+.body__no-scroll {
+  overflow-y: hidden;
+}
 .body--dark {
   background: #3b3b3b;
   color: rgb(195, 195, 195);
