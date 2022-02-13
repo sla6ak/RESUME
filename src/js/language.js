@@ -92,7 +92,7 @@ export class Language extends Resume {
       projeckts: 'Мої проекти:',
       educations: 'Освіта:',
       aboutMe: 'Про мене:',
-      experience: 'Досвід роботи',
+      experience: 'Досвід роботи:',
       myEng: 'Англійська нижча за середню, розумію документацію.',
       myExperience: 'Я не маю комерційного досвіду роботи в IT сфері.',
       lastWork:
@@ -124,7 +124,7 @@ export class Language extends Resume {
       projeckts: 'Мои проэкты:',
       educations: 'Образование:',
       aboutMe: 'Немного обо мне:',
-      experience: 'Опыт работы',
+      experience: 'Опыт работы:',
       myEng: 'Английский ниже среднего, понимаю документацию.',
       myExperience: 'У меня нет комерческого опыта работы в IT сфере.',
       lastWork:
