@@ -9,6 +9,10 @@
     margin-top: 0px;
   }
 }
+.my-name {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
 .geroy {
   display: flex;
   flex-direction: column;
@@ -41,11 +45,13 @@ h2 {
 .info__prodjects {
   list-style: none;
 }
-.info__prodject--link {
-  position: relative;
+.info__prodject--code {
+  margin-right: 7px;
+}
+.info__prodject--linkcode {
   display: block;
-  color: rgb(138, 138, 138);
-  text-shadow: 1px 1px 1px black;
+  color: rgb(56, 139, 150);
+  text-shadow: 0px 1px 1px black;
   margin-right: auto;
   margin-bottom: 6px;
   @media screen and (min-width: 1200px) {
@@ -55,17 +61,32 @@ h2 {
   &:focus {
     color: $accent-color;
   }
-  &:after {
-    content: '';
-    position: absolute;
-    bottom: 0px;
-    left: 0px;
-    width: 100%;
-    background-color: $accent-color;
-    height: 0px;
-    height: 1px;
-    box-shadow: 0 0 3px 0 #a36e0a inset, 0 0 3px 1px #9e6f0a67;
+}
+.info__prodject--link {
+  position: relative;
+  display: block;
+  color: rgb(138, 138, 138);
+  text-shadow: 0px 1px 1px black;
+  margin-right: auto;
+  margin-bottom: 6px;
+  @media screen and (min-width: 1200px) {
+    margin-right: 50px;
   }
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+  // &:after {
+  //   content: '';
+  //   position: absolute;
+  //   bottom: 0px;
+  //   left: 0px;
+  //   width: 100%;
+  //   background-color: $accent-color;
+  //   height: 0px;
+  //   height: 1px;
+  //   box-shadow: 0 0 3px 0 #a36e0a inset, 0 0 3px 1px #9e6f0a67;
+  // }
 }
 .info__project-li {
   display: flex;

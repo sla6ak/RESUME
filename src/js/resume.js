@@ -37,6 +37,7 @@ export class Resume {
       cityName: document.querySelector('.adress-city'),
       dataNew: document.querySelector('.data__new'),
       upScroll: document.querySelector('#scrollup'),
+      langSkill: document.querySelector('.js-langskill'),
     };
   }
   curentDate = () => {
