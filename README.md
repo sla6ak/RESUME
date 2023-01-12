@@ -6,6 +6,7 @@ my settings for any project
 установит нпм зависимости
 ## npm run start
 
+
 режим разработчика
 ## npm run build
 
@@ -16,3 +17,4 @@ my settings for any project
 http-server
 
 позволяет настраивать под себя разные порты на одном проэкте в конфигах
+fg
