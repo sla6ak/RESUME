@@ -104,16 +104,14 @@ export function Footer() {
 
           {/* Map - right */}
           <div className="w-full md:w-64 md:shrink-0">
-            <div className="rounded-2xl overflow-hidden shadow-md border border-slate-200 dark:border-slate-700">
-              <div className="w-full h-64 mx-auto">
-                <iframe
-                  src="https://www.openstreetmap.org/export/embed.html?bbox=33.28,47.78,33.42,47.90&layer=mapnik&marker=47.83940783900248%2C33.35141898014392"
-                  className="w-full h-full border-0"
-                  allowFullScreen
-                  loading="lazy"
-                  title="Map - Krivoy Rog"
-                />
-              </div>
+            <div className="shadow-md border border-slate-200 dark:border-slate-700 rounded-2xl">
+              <iframe
+                src="https://www.openstreetmap.org/export/embed.html?bbox=33.28,47.78,33.42,47.90&layer=mapnik&marker=47.83940783900248%2C33.35141898014392"
+                className="w-full h-64 border-0 rounded-2xl"
+                allowFullScreen
+                loading="lazy"
+                title="Map - Krivoy Rog"
+              />
             </div>
             <p className="text-xs text-slate-500 dark:text-slate-400 mt-2">
               Krivoy Rog, Ukraine
