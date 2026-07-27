@@ -107,7 +107,7 @@ export function Footer() {
             <div className="rounded-2xl overflow-hidden shadow-md border border-slate-200 dark:border-slate-700">
               <div className="w-full h-64 mx-auto">
                 <iframe
-                  src="https://www.openstreetmap.org/export/embed.html?bbox=33.28,47.85,33.48,47.96&layer=mapnik&marker=47.90966%2C33.38044"
+                  src="https://www.openstreetmap.org/export/embed.html?bbox=33.28,47.78,33.42,47.90&layer=mapnik&marker=47.83940783900248%2C33.35141898014392"
                   className="w-full h-full border-0"
                   allowFullScreen
                   loading="lazy"
