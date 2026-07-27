@@ -2,13 +2,15 @@ export const BurgerMenu = ({
   isDark,
   toggleTheme,
   onClose,
+  isOpen,
 }: {
   isDark: boolean;
   toggleTheme: () => void;
   onClose: () => void;
+  isOpen: boolean;
 }) => {
   return (
-    <nav className="lg:hidden fixed top-[73px] left-0 w-full max-w-[280px] h-[calc(100vh-73px)] bg-white dark:bg-slate-800 shadow-4xl translate-x-0 transition-transform duration-300 ease-in-out">
+    <nav className={`lg:hidden fixed top-[73px] right-0 w-full max-w-[280px] h-[calc(100vh-73px)] bg-white dark:bg-slate-800 shadow-4xl z-[1001] transition-transform duration-300 ease-in-out ${isOpen ? 'translate-x-0' : 'translate-x-[100%]'}`}>
       <ul className="flex flex-col p-6 gap-3">
         <li>
           <a
