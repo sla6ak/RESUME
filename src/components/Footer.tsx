@@ -15,7 +15,7 @@ export function Footer() {
             <h3 className="text-lg font-semibold text-slate-800 dark:text-slate-200 mb-4">
               Contact Information
             </h3>
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-col gap-3">
               <a
                 href="tel:+380966290475"
                 className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-green-100 dark:hover:bg-green-900/30 hover:text-green-700 dark:hover:text-green-400 transition-all duration-200 hover:scale-105"
@@ -105,7 +105,7 @@ export function Footer() {
           {/* Map - right */}
           <div className="w-full md:w-64 md:shrink-0">
             <div className="rounded-2xl overflow-hidden shadow-md border border-slate-200 dark:border-slate-700">
-              <div className="w-full max-w-[256px] mx-auto aspect-square">
+              <div className="w-full h-64 mx-auto">
                 <iframe
                   src="https://www.openstreetmap.org/export/embed.html?bbox=33.78,49.26,33.90,49.35&layer=mapnik&marker=49.3162%2C33.8346"
                   className="w-full h-full border-0"
