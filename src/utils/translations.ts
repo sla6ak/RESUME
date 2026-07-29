@@ -5,9 +5,9 @@ export interface TranslationKeys {
   hero: Record<string, string>;
   skills: {
     title: string;
+    localAI: string;
     techStack: string;
     backendAndInfrastructure: string;
-    localAI: string;
     frontend: string;
     softSkills: string;
     languages: string;
@@ -32,6 +32,7 @@ export interface TranslationKeys {
       title: string;
       company: string;
       description: string;
+      links?: { label: string; url: string }[];
     }[];
   };
   footer: Record<string, string>;
@@ -55,9 +56,9 @@ export const translations: Record<Language, TranslationKeys> = {
     },
     skills: {
       title: 'Skills & Experience',
+      localAI: 'AI & Local LLMs',
       techStack: 'Tech Stack',
       backendAndInfrastructure: 'Backend & Infrastructure',
-      localAI: 'AI & Local LLMs',
       frontend: 'Frontend',
       softSkills: 'Soft Skills',
       languages: 'Languages',
@@ -116,6 +117,16 @@ export const translations: Record<Language, TranslationKeys> = {
           company: 'GoIT Company',
           description:
             'Intensive hands-on training focused on modern JavaScript, React, Node.js, and web application architecture. Built multiple individual and team projects from scratch, following agile methodologies and best engineering practices.',
+          links: [
+            {
+              label: 'Full-Stack Course',
+              url: 'https://goit.global/ua/courses/fullstack/',
+            },
+            {
+              label: 'Diploma (PDF)',
+              url: '/Yachmenyk Viktor.pdf',
+            },
+          ],
         },
         {
           date: '2021 – Present',
@@ -159,9 +170,9 @@ export const translations: Record<Language, TranslationKeys> = {
     },
     skills: {
       title: 'Навички та досвід',
+      localAI: 'ШІ та Локальні LLM',
       techStack: 'Технічний стек',
       backendAndInfrastructure: 'Backend та Інфраструктура',
-      localAI: 'ШІ та Локальні LLM',
       frontend: 'Frontend',
       softSkills: "М'які навички",
       languages: 'Мови',
@@ -221,6 +232,16 @@ export const translations: Record<Language, TranslationKeys> = {
           company: 'GoIT Company',
           description:
             'Інтенсивна практика з сучасного JavaScript, React, Node.js та архітектури веб-додатків. Створено кілька індивідуальних та командних проєктів з нуля, з дотриманням agile-методологій та найкращих інженерних практик.',
+          links: [
+            {
+              label: 'Курс Full-Stack',
+              url: 'https://goit.global/ua/courses/fullstack/',
+            },
+            {
+              label: 'Диплом (PDF)',
+              url: '/Yachmenyk Viktor.pdf',
+            },
+          ],
         },
         {
           date: '2021 – Present',
@@ -264,9 +285,9 @@ export const translations: Record<Language, TranslationKeys> = {
     },
     skills: {
       title: 'Навыки и опыт',
+      localAI: 'ИИ и Локальные LLM',
       techStack: 'Технический стек',
       backendAndInfrastructure: 'Backend и Инфраструктура',
-      localAI: 'ИИ и Локальные LLM',
       frontend: 'Frontend',
       softSkills: 'Мягкие навыки',
       languages: 'Языки',
@@ -326,6 +347,16 @@ export const translations: Record<Language, TranslationKeys> = {
           company: 'GoIT Company',
           description:
             'Интенсивная практика с современным JavaScript, React, Node.js и архитектурой веб-приложений. Создано несколько индивидуальных и командных проектов с нуля, с соблюдением agile-методологий и лучших инженерных практик.',
+          links: [
+            {
+              label: 'Курс Full-Stack',
+              url: 'https://goit.global/ua/courses/fullstack/',
+            },
+            {
+              label: 'Диплом (PDF)',
+              url: '/Yachmenyk Viktor.pdf',
+            },
+          ],
         },
         {
           date: '2021 – Present',

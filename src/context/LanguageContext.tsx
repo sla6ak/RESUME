@@ -23,7 +23,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
 
   const setLanguage = useCallback((l: Language) => {
     setLang(l);
-    localStorage.setItem('languageResume', JSON.stringify(l));
+    localStorage.setItem('languageResume', l);
   }, []);
 
   const t = useCallback(

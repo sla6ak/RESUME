@@ -5,14 +5,16 @@ export const Skills = () => {
   const skills = t('skills');
 
   const techCategories = [
+    { key: 'localAI' as const, label: skills.localAI },
     { key: 'frontend' as const, label: 'Frontend' },
     { key: 'backendAndInfrastructure' as const, label: skills.backendAndInfrastructure },
-    { key: 'localAI' as const, label: skills.localAI },
   ];
 
   const techSkills = {
     localAI: [
-      'Local LLM Runtime (Ollama, Llama.cpp)',
+      'Ollama',
+      'LM Studio',
+      'Local LLM Runtime (Llama.cpp)',
       'Model Quantization & Optimization (GGUF)',
       'AI Agents & Tooling Integration (MCP, APIs)',
     ],
