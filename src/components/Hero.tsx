@@ -1,4 +1,5 @@
 import { useLanguage } from '../hooks/useLanguage';
+import heroImg from '../assets/images/viktor.png';
 
 export const Hero = () => {
   const { t } = useLanguage();
@@ -10,7 +11,7 @@ export const Hero = () => {
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6 py-12 sm:py-10 flex flex-col-reverse sm:flex-row items-center sm:justify-center gap-6 sm:gap-8 w-full">
         <div className="flex-shrink-0 w-[clamp(120px,40vw,340px)] h-[clamp(120px,40vw,340px)] sm:w-[clamp(150px,30vw,340px)] sm:h-[clamp(150px,30vw,340px)]">
           <img
-            src="/viktor.png"
+            src={heroImg}
             alt="Viktor Yachmenyk"
             className="w-full h-full object-cover rounded-[24px] shadow-[0_20px_60px_rgba(0,0,0,0.15)]"
           />

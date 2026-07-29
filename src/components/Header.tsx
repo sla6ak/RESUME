@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useTheme } from '../hooks/useTheme';
 import { useLanguage } from '../hooks/useLanguage';
 import { BurgerMenu } from './BurgerMenu';
+import githubIcon from '../assets/images/svg/github.svg';
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,7 +26,7 @@ export const Header = () => {
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 text-accent-primary hover:text-accent-hover font-semibold transition-colors"
         >
-          <img src="/svg/github.svg" alt="GitHub" className="w-7 h-7" />
+          <img src={githubIcon} alt="GitHub" className="w-7 h-7" />
           <span className="text-slate-800 dark:text-slate-100">Viktor</span>
         </a>
 

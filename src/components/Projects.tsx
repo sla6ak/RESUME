@@ -1,20 +1,23 @@
 import { useLanguage } from '../hooks/useLanguage';
+import project1Img from '../assets/images/001.png';
+import project2Img from '../assets/images/002.png';
+import project3Img from '../assets/images/003.png';
 
 const projectData = [
   {
     url: 'https://sla6ak.github.io/IceCream-Project-Team1/',
     gradient: 'linear-gradient(135deg, #fa709a 0%, #fee140 100%)',
-    src: '/001.png',
+    src: project1Img,
   },
   {
     url: 'https://sla6ak.github.io/team-project-js-filmoteka/',
     gradient: 'linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)',
-    src: '/002.png',
+    src: project2Img,
   },
   {
     url: 'https://github.com/sla6ak',
     gradient: 'linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%)',
-    src: '/003.png',
+    src: project3Img,
   },
 ];
 
