@@ -1,4 +1,6 @@
-export const BurgerMenu = ({
+import { useLanguage, Language } from '../hooks/useLanguage';
+
+const BurgerMenu = ({
   isDark,
   toggleTheme,
   onClose,
@@ -9,54 +11,35 @@ export const BurgerMenu = ({
   onClose: () => void;
   isOpen: boolean;
 }) => {
+  const { t, lang, setLanguage } = useLanguage();
+  const header = t('header');
+  const menu = t('burgerMenu');
+
+  const navItems = [
+    { href: '#about', label: header.about },
+    { href: '#skills', label: header.skills },
+    { href: '#projects', label: header.projects },
+    { href: '#education', label: header.education },
+    { href: '#contacts', label: header.contacts },
+  ];
+
+  const languages: Language[] = ['en', 'ua', 'ru'];
+  const langLabels: Record<Language, string> = { en: 'EN', ua: 'UA', ru: 'RU' };
+
   return (
     <nav className={`lg:hidden fixed top-[73px] right-0 w-full max-w-[280px] h-[calc(100vh-73px)] bg-white dark:bg-slate-800 shadow-4xl z-[1001] transition-transform duration-300 ease-in-out ${isOpen ? 'translate-x-0' : 'translate-x-[100%]'}`}>
       <ul className="flex flex-col p-6 gap-3">
-        <li>
-          <a
-            href="#about"
-            onClick={(e) => { e.preventDefault(); onClose(); setTimeout(() => window.location.hash = '#about', 50); }}
-            className="block px-4 py-3 rounded-full text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700 hover:text-accent-primary font-medium transition-all"
-          >
-            About
-          </a>
-        </li>
-        <li>
-          <a
-            href="#skills"
-            onClick={(e) => { e.preventDefault(); onClose(); setTimeout(() => window.location.hash = '#skills', 50); }}
-            className="block px-4 py-3 rounded-full text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700 hover:text-accent-primary font-medium transition-all"
-          >
-            Skills
-          </a>
-        </li>
-        <li>
-          <a
-            href="#projects"
-            onClick={(e) => { e.preventDefault(); onClose(); setTimeout(() => window.location.hash = '#projects', 50); }}
-            className="block px-4 py-3 rounded-full text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700 hover:text-accent-primary font-medium transition-all"
-          >
-            Projects
-          </a>
-        </li>
-        <li>
-          <a
-            href="#education"
-            onClick={(e) => { e.preventDefault(); onClose(); setTimeout(() => window.location.hash = '#education', 50); }}
-            className="block px-4 py-3 rounded-full text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700 hover:text-accent-primary font-medium transition-all"
-          >
-            Education
-          </a>
-        </li>
-        <li>
-          <a
-            href="#contacts"
-            onClick={(e) => { e.preventDefault(); onClose(); setTimeout(() => window.location.hash = '#contacts', 50); }}
-            className="block px-4 py-3 rounded-full text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700 hover:text-accent-primary font-medium transition-all"
-          >
-            Contacts
-          </a>
-        </li>
+        {navItems.map(item => (
+          <li key={item.href}>
+            <a
+              href={item.href}
+              onClick={(e) => { e.preventDefault(); onClose(); setTimeout(() => window.location.hash = item.href, 50); }}
+              className="block px-4 py-3 rounded-full text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700 hover:text-accent-primary font-medium transition-all"
+            >
+              {item.label}
+            </a>
+          </li>
+        ))}
       </ul>
       <ul className="border-t border-slate-200 dark:border-slate-700 p-6 flex flex-col gap-3">
         <li>
@@ -88,11 +71,14 @@ export const BurgerMenu = ({
                 <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
               </svg>
             )}
-            Theme
+            {menu.theme}
           </button>
         </li>
         <li>
-          <button className="flex items-center gap-3 px-4 py-3 w-full rounded-full text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700 hover:text-accent-primary transition-all border-none bg-transparent">
+          <button
+            onClick={() => setLanguage(languages[(languages.indexOf(lang) + 1) % languages.length])}
+            className="flex items-center gap-3 px-4 py-3 w-full rounded-full text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700 hover:text-accent-primary transition-all border-none bg-transparent"
+          >
             <svg
               width="20"
               height="20"
@@ -103,10 +89,12 @@ export const BurgerMenu = ({
             >
               <path d="M3 12h18M3 12l2-2m-2 2l2 2M21 12h-6m6 0l-2-2m2 2l2 2M3 19h18M3 19l2-2m-2 2l2-2M3 5h18M3 5l2 2m-2-2l2 2" />
             </svg>
-            Language
+            {menu.language} ({langLabels[lang]})
           </button>
         </li>
       </ul>
     </nav>
   );
 };
+
+export { BurgerMenu };

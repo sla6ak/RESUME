@@ -1,4 +1,9 @@
+import { useLanguage } from '../hooks/useLanguage';
+
 export const Hero = () => {
+  const { t } = useLanguage();
+  const hero = t('hero');
+
   return (
     <section id="about" className="flex items-center justify-center relative overflow-hidden">
       <div className="absolute top-[-50%] right-[-15%] w-[90%] h-[300px] bg-accent-light/60 dark:bg-accent-primary/10 rounded-full blur-3xl pointer-events-none" />
@@ -12,14 +17,13 @@ export const Hero = () => {
         </div>
         <div className="text-left max-w-[600px] animate-fadeInUp px-2 sm:px-0">
           <p className="text-accent-primary font-semibold text-xs sm:text-sm uppercase tracking-[0.1em] mb-3 sm:mb-4">
-            Full-Stack Engineer
+            {hero.subtitle}
           </p>
           <h1 className="text-[clamp(1.75rem,5vw,3.5rem)] font-extrabold leading-[1.1] text-slate-900 dark:text-slate-100 mb-3 sm:mb-4">
-            Viktor Yachmenyk
+            {hero.title}
           </h1>
           <p className="text-slate-600 dark:text-slate-300 text-sm sm:text-[clamp(1rem,2vw,1.125rem)] leading-relaxed max-w-[600px]">
-            Scalable Web Systems • High Performance & Clean Code • Local AI & LLM Workflows
-            Integration.
+            {hero.description}
           </p>
         </div>
       </div>

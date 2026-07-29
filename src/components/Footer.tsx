@@ -1,8 +1,9 @@
-
-
-import React from 'react';
+import { useLanguage } from '../hooks/useLanguage';
 
 export function Footer() {
+  const { t } = useLanguage();
+  const footer = t('footer');
+
   return (
     <footer
       id="contacts"
@@ -13,7 +14,7 @@ export function Footer() {
           {/* Contacts - left */}
           <div className="flex-1">
             <h3 className="text-lg font-semibold text-slate-800 dark:text-slate-200 mb-4">
-              Contact Information
+              {footer.contactInfo}
             </h3>
             <div className="flex flex-col gap-3">
               <a
@@ -114,7 +115,7 @@ export function Footer() {
               />
             </div>
             <p className="text-xs text-slate-500 dark:text-slate-400 mt-2">
-              Krivoy Rog, Ukraine
+              {footer.location}
             </p>
           </div>
         </div>
@@ -122,7 +123,9 @@ export function Footer() {
 
       {/* Bottom bar */}
       <div className="max-w-[1200px] mx-auto px-6 py-4 border-t border-slate-200 dark:border-slate-700 text-center">
-        <p className="text-sm text-slate-500 dark:text-slate-400">Resume updated: 2026</p>
+        <p className="text-sm text-slate-500 dark:text-slate-400">
+          {footer.updated}
+        </p>
       </div>
     </footer>
   );
