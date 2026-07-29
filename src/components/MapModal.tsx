@@ -1,6 +1,19 @@
 import { useEffect, useRef } from 'react';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
+import markerIcon from 'leaflet/dist/images/marker-icon.png';
+import markerIcon2x from 'leaflet/dist/images/marker-icon-2x.png';
+import markerShadow from 'leaflet/dist/images/marker-shadow.png';
+
+const customIcon = L.icon({
+  iconUrl: markerIcon,
+  iconRetinaUrl: markerIcon2x,
+  shadowUrl: markerShadow,
+  iconSize: [25, 41],
+  iconAnchor: [12, 41],
+  popupAnchor: [1, -34],
+  shadowSize: [41, 41],
+});
 
 export const MapModal = () => {
   const mapRef = useRef<HTMLDivElement>(null);
@@ -26,7 +39,7 @@ export const MapModal = () => {
       maxZoom: 19,
     }).addTo(map);
 
-    L.marker([47.8394, 33.3514])
+    L.marker([47.8394, 33.3514], { icon: customIcon })
       .addTo(map)
       .bindPopup('Кривой Рог');
 
