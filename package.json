@@ -2,11 +2,11 @@
   "name": "webpac-for-linux",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.html",
   "homepage": "https://sla6ak.github.io/RESUME",
   "scripts": {
-    "start": "webpack serve --mode=development",
-    "build": "webpack --mode=production",
+    "start": "vite",
+    "build": "vite build",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
     "test": "echo \"Error: no test specified\" && exit 1"
